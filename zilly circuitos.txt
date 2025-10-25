@@ -1,0 +1,11 @@
+sys.reset();
+
+Z => Z not := fn(Z p) -> if(p, 0, 1);
+
+Z => Z => Z and := fn(Z p) -> fn(Z q) -> if(p, q, 0);
+
+Z => Z => Z or := fn(Z p) -> fn(Z q) -> if(p, 1, q);
+
+Z => Z => Z nand := fn(Z p) -> fn(Z q) -> not(and(p)(q));
+
+Z => Z => Z => Z D := fn(Z x) -> fn(Z y) -> fn(Z z) -> and(or(x)(y))(nand(y)(z));
