@@ -1,0 +1,12 @@
+------------------------------------
+-- D
+------------------------------------
+
+- Esta parte no compila :(, no sigue las indicaciones de la tarea.
+
+------------------------------------
+-- E
+------------------------------------
+
+- Buenos casos de prueba para el add, cubren casi todos los casos (excepto la identidad).
+- Soy el just in case de la funcion lt.

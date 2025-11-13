@@ -1,0 +1,48 @@
+------------------------------------
+-- Definicion de Funciones en Zilly
+------------------------------------
+
+- add: definicion correcta, 9/9 casos de prueba superados
+- t4: definicion correcta, 5/5 casos de prueba superados
+- t256: definicion correcta, 5/5 casos de prueba superados
+- implies: definicion correcta, 4/4 casos de prueba superados
+- min: definicion correcta, 4/4 casos de prueba superados
+
+------------------------------------
+-- Definicion de Funciones en C++
+------------------------------------
+
+- my_info: definicion correcta, 4/4 casos de prueba superados
+           muy bien que hiciste todos los casos de prueba c:
+
+
+------------------------------------
+-- Tabla de Verdad
+------------------------------------
+
+Tabla correcta
+
+------------------------------------
+-- Circuito en Zilly
+------------------------------------
+
+- f: definicion correcta, 8/8 casos de prueba superados
+
+------------------------------------
+-- Circuito en C++
+------------------------------------
+
+- f: definicion correcta, 8/8 casos de prueba superados
+     muy bien que hiciste todos los casos de prueba c:
+     tremendo manejo de lazos!
+     la tabla te quedo bien estilizada. Recordare esto!
+
+------------------------------------
+-- Observaciones Finales
+------------------------------------
+
+- Muy fan de que uses los nombres calificados por std::
+  es una muy buena practica.
+
+
+excelente entrega, muchas felicitaciones! :D
