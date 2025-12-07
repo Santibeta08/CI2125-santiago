@@ -1,0 +1,17 @@
+Query 0: Promedio carrera Ingeniería Electrónica (Año 2044) PROMEDIO_NOTA( SELECCIONAR[year = 2044] (Calificacion) NATURAL JOIN Estudiante NATURAL JOIN SELECCIONAR[descripcion = "Ing. Electronica"] (Carrera) )
+
+Query 1: Cantidad de graduados Computación y Electrónica (Año 2050) CONTAR_CARNETS( SELECCIONAR[year = 2050 AND graduado = true] (Estudiante) NATURAL JOIN SELECCIONAR[descripcion = "Computacion" OR descripcion = "Electronica"] (Carrera) )
+
+Query 2: Asignaturas del departamento de Computación PROYECTAR[codigo, descripcion] ( Asignatura NATURAL JOIN SELECCIONAR[descripcion = "Dpto. Computacion"] (Departamento) )
+
+Query 3: Estudiantes activos que cursaron Matemáticas VII y pasaron Física I (nota >= 4) Temp_Mate7 = PROYECTAR[carnet] ( SELECCIONAR[asignatura = "Matematicas VII"] (Calificacion) ) Temp_Fisica1 = PROYECTAR[carnet] ( SELECCIONAR[asignatura = "Fisica I" AND nota >= 4] (Calificacion) )
+
+Resultado = SELECCIONAR[activo = true] (Estudiante) NATURAL JOIN (Temp_Mate7 INTERSECCION Temp_Fisica1)
+
+Query 4: UC aprobadas por activos de Ing. Electrónica hasta 2046 (que tomaron Mate IV) Estudiantes_Electronica = SELECCIONAR[activo = true] (Estudiante) NATURAL JOIN SELECCIONAR[descripcion = "Ing. Electronica"] (Carrera) Estudiantes_Mate4 = PROYECTAR[carnet] ( SELECCIONAR[asignatura = "Matematicas IV"] (Calificacion) )
+
+Estudiantes_Target = Estudiantes_Electronica NATURAL JOIN Estudiantes_Mate4
+
+Materias_Validas = SELECCIONAR[year <= 2046] (Calificacion) NATURAL JOIN Asignatura
+
+Resultado = AGRUPAR_POR[carnet] CALCULAR_SUMA[uc] ( Estudiantes_Target NATURAL JOIN Materias_Validas )
